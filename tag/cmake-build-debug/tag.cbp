@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/alex/CLionProjects/piv/tag/library.cpp">
+			<Option target="tag"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/piv/tag/library.h">
+			<Option target="tag"/>
+		</Unit>
 		<Unit filename="/home/alex/CLionProjects/piv/tag/main.cpp">
 			<Option target="tag"/>
 		</Unit>

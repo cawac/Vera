@@ -143,6 +143,33 @@ tag/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tag.dir/build.make CMakeFiles/tag.dir/build
 .PHONY : tag/fast
 
+library.o: library.cpp.o
+
+.PHONY : library.o
+
+# target to build an object file
+library.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tag.dir/build.make CMakeFiles/tag.dir/library.cpp.o
+.PHONY : library.cpp.o
+
+library.i: library.cpp.i
+
+.PHONY : library.i
+
+# target to preprocess a source file
+library.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tag.dir/build.make CMakeFiles/tag.dir/library.cpp.i
+.PHONY : library.cpp.i
+
+library.s: library.cpp.s
+
+.PHONY : library.s
+
+# target to generate assembly for a file
+library.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tag.dir/build.make CMakeFiles/tag.dir/library.cpp.s
+.PHONY : library.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tag"
+	@echo "... library.o"
+	@echo "... library.i"
+	@echo "... library.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

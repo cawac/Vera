@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tag.dir/library.cpp.o"
   "CMakeFiles/tag.dir/main.cpp.o"
   "tag"
   "tag.pdb"

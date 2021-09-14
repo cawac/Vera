@@ -94,12 +94,12 @@ clean: CMakeFiles/tag.dir/clean
 CMakeFiles/tag.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tag.dir/build.make CMakeFiles/tag.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tag.dir/build.make CMakeFiles/tag.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/CLionProjects/piv/tag/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target tag"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alex/CLionProjects/piv/tag/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target tag"
 .PHONY : CMakeFiles/tag.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tag.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/CLionProjects/piv/tag/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/CLionProjects/piv/tag/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tag.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/CLionProjects/piv/tag/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/tag.dir/rule
