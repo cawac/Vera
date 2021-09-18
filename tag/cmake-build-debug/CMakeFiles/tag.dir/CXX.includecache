@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/alex/CLionProjects/piv/tag/main.cpp
+/home/alex/CLionProjects/piv/tag/library.cpp
+library.h
+/home/alex/CLionProjects/piv/tag/library.h
+
+/home/alex/CLionProjects/piv/tag/library.h
 iostream
 -
 ctime
@@ -15,4 +19,8 @@ cstdlib
 -
 iomanip
 -
+
+/home/alex/CLionProjects/piv/tag/main.cpp
+library.h
+/home/alex/CLionProjects/piv/tag/library.h
 
