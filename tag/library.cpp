@@ -10,3 +10,9 @@ int field::getNumber() const {
 void field::setNumber(int number) {
     field::number = number;
 }
+
+field::field(int number) : number(number) {}
+
+field::field() {
+
+}

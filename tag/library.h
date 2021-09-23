@@ -5,28 +5,38 @@
 #include <cstdlib>
 #include <iomanip>
 using namespace std;
-
 class field{
 private:
     int number;
 public:
     void setNumber(int number);
     int getNumber() const;
+    field(int number);
+
+    field();
 };
+/*
 field operator == (field b,int a){
     b.setNumber(a);
     return b;
 }
+*/
 class game{
 private:
     field **table;
     static const int n=4;
+    field second [n][n];
     int place_of_zero_x{},place_of_zero_y{};//place of 0
 public:
     game(){
         table= new field* [n];
         for (int i = 0; i < n; ++i) {
             table[i]= new field[n];
+        }
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                second[i][j]=n*i+1+j;
+            }
         }
     }
     ~game(){
@@ -64,8 +74,7 @@ public:
         bool key= false;
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < n; ++j) {
-                if (table[n-1][n-1].getNumber()==0 )//mean that all must be in their positions and last 0
-                    if(table[i][j].getNumber()==n*i+j+1 && (i!=n-1 && j!=n-1))
+                if(table[i][j].getNumber()==second[i][j].getNumber() )
                     {
                         key=true;
                     }
