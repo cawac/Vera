@@ -6,10 +6,10 @@
 #include <iomanip>
 class field{
 private:
-    static int number;
+    int number;
 public:
-    static void setNumber(int number);
-    int getNumber()const;
+    int getNumber() const;
+    void setNumber(int number);
     field( int number);
     field();
     bool operator == (int a);
@@ -17,7 +17,7 @@ public:
 
 class game{
 private:
-    field **table=nullptr;
+    field **table=NULL;
     const static int n=4;
     field second [n][n];
     int place_of_zero_x{},place_of_zero_y{};//place of 0
