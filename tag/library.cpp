@@ -15,7 +15,7 @@ field::field(int number) {
 
 }
 
-int field::getNumber() const{
+int field::getNumber() const {
     return number;
 }
 
@@ -48,7 +48,7 @@ game::~game() {
 void game::recursion(int i) {// filling empty`s places
     int k=rand()%n;
     int j=rand()%n;
-    if(table[k][j]==0)// filling [k][j] place in tag
+    if(table[k][j].getNumber()==0)// filling [k][j] place in tag
     {
         table[k][j].setNumber(i);
     }
@@ -140,4 +140,5 @@ std::ostream& operator<<(std::ostream &out, game &game) {
         }
         out << "\n";
     }
+    return out;
 }
