@@ -7,7 +7,7 @@ field::field() {
 
 }
 
-bool field::operator==( int a) {
+bool field::operator == ( int a) {
     return this->getNumber() == a;
 }
 
@@ -31,9 +31,9 @@ game::game() {
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             if(!(i==n-1 && j==n-1))
-                second[i][j]=n*i+1+j;
+                second[i][j].setNumber(n*i+1+j);
             else
-                second[i][j]=0;
+                second[i][j].setNumber(0);
         }
     }
 }
@@ -45,23 +45,34 @@ game::~game() {
     delete [] table;
 }
 
-void game::recursion(int i) {// filling empty`s places
-    int k=rand()%n;
-    int j=rand()%n;
-    if(table[k][j].getNumber()==0)// filling [k][j] place in tag
-    {
-        table[k][j].setNumber(i);
-    }
-    else
-    {
-        recursion(i);//repeat, if place is not empty
-    }
-}
-
 void game::create() {// make the initial tag
-    for (int i = 1; i < n*n; ++i) {
-        recursion(i);// filling empty`s places with numbers in range 1 ... 15
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            table[i][j].setNumber(second[i][j].getNumber());
+        }
     }
+    place_of_zero_y=3;
+    place_of_zero_x=3;
+    int key1, key2 = -1;
+    for (int i = 0; i < 1000000; ++i) {
+        key1 = rand() % 4;
+        if (key1 != key2)
+            switch (key1) {
+                case 0:
+                    if(place_of_zero_x+1!=4)move(table[place_of_zero_x+1][place_of_zero_y].getNumber());break;
+                case 1:
+                    if(place_of_zero_x-1!=-1)move(table[place_of_zero_x-1][place_of_zero_y].getNumber());break;
+                case 2:
+                    if(place_of_zero_y+1!=4)move(table[place_of_zero_x][place_of_zero_y+1].getNumber());break;
+                case 3:
+                    if(place_of_zero_y-1!=-1)move(table[place_of_zero_x][place_of_zero_y-1].getNumber());break;
+            }
+        else
+            i--;
+        key2 = key1;
+    }
+    if (wincondition())
+        create();
 }
 
 bool game::wincondition() { //check the winning condition
@@ -96,9 +107,8 @@ void game::set_x_y() {
 
 }
 
-void game::move() {
-    int changefield;
-    std::cin>>changefield;
+void game::move(int changefield) {
+
     if ((place_of_zero_x+1)!=n)
         if (table[place_of_zero_y][place_of_zero_x+1]==changefield)
         {
