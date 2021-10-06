@@ -25,10 +25,9 @@ public:
     game();
     ~game();
     friend std::ostream& operator << (std::ostream &out , game &game);
-    void recursion(int i);
     void create();
     bool wincondition();
     void set_x_y();
-    void move();
+    void move(int);
 };
 #endif //TAG_LIBRARY_H
