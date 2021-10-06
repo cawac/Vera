@@ -27,7 +27,6 @@ public:
     friend std::ostream& operator << (std::ostream &out , game &game);
     void create();
     bool wincondition();
-    void set_x_y();
     void move(int);
 };
 #endif //TAG_LIBRARY_H

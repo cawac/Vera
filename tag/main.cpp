@@ -5,7 +5,6 @@ int main() {
     int changefield;
     tag.create();
     std::cout<<tag;
-    tag.set_x_y();
     while (!tag.wincondition()) {
         std::cin>>changefield;
         tag.move(changefield);
