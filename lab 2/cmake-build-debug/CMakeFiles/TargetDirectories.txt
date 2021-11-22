@@ -1,3 +1,0 @@
-/home/alex/CLionProjects/piv/lab 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/alex/CLionProjects/piv/lab 2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/alex/CLionProjects/piv/lab 2/cmake-build-debug/CMakeFiles/lab_2.dir
